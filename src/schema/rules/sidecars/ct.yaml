@@ -59,44 +59,36 @@ CTReconstruction:
 
     MatrixSize:
       level: optional
-      description_addendum: |
-        An array of integers with a length of 3 denoting the matrix size of the acquisition slab. This should be specified as, for example, [32, 32, 1] for a 2D acquisition or [32, 1, 1] for a 1D acquisition.
-        array of three numbers
+      description_addendum: 
+        $ref: objects.metadata.MatrixSize.description
 
     ReconMethodName:
       level: optional
-      description_addendum: |
-        Reconstruction method or algorithm. Corresponds to DICOM Tag 0054,1103. 
-        string 
+      description_addendum:
+        $ref: objects.metadata.ReconMethodName.description
 
     MethodParameterLabels:
       level: optional
-      description_addendum: |
-        Names of filter parameters. Corresponds to DICOM Tag 0054,1103. 
-        array of strings 
+      description_addendum: 
+        $ref: objects.metadata.MethodParameterLabels.description
 
     MethodParameterUnits:
       level: optional
-      description_addendum: |
-        Units of filter parameters. Corresponds to DICOM Tag 0054,1103. 
-        array of strings 
+      description_addendum:
+        $ref: objects.metadata.MethodParameterUnits.description
 
     MethodParameterValues:
       level: optional
-      description_addendum: |
-        Values of filter parameters. Corresponds to DICOM Tag 0054,1103. 
-        arrays of numbers 
+      description_addendum:
+        $ref: objects.metadata.MethodParameterValues.description
 
     MethodImplementationVersion:
       level: optional
-      description_addendum: |
-        Identification for the software used, such as name and version (optional). Corresponds to DICOM Tag 0054,1103. 
-        string 
+      description_addendum: 
+        $ref: objects.metadata.MethodImplementationVersion.description
 
     ReconFilterType:
       level: optional
-      description_addendum: |
-        Type of post-recon smoothing. Corresponds to DICOM Tag 0054,1103. 
-        string 
-        "none", "gaussian", ...
+      description_addendum: 
+        $ref: objects.metadata.ReconFilterType.description
 

@@ -2180,6 +2180,36 @@ MetaboliteRecoveryCorrectionApplied:
     If `true`, the `hplc_recovery_fractions` column MUST be present in the
     corresponding `*_blood.tsv` file.
   type: boolean
+MethodParameterLabels:
+  name: MethodParameterLabels
+  display_name: Method Parameter Labels
+  description: |
+    Names of filter parameters. Corresponds to DICOM Tag 0054,1103.
+  type: array
+  items:
+    type: string
+MethodParameterUnits:
+  name: MethodParameterUnits
+  display_name: Method Parameter Units
+  description: |
+    Units of filter parameters. Corresponds to DICOM Tag 0054,1103.
+  type: array
+  items:
+    type: string
+MethodParameterValues:
+  name: MethodParameterValues
+  display_name: Method Parameter Values
+  description: |
+    Values of filter parameters. Corresponds to DICOM Tag 0054,1103.
+  type: array
+  items:
+    type: number
+MethodImplementationVersion:
+  name: MethodImplementationVersion
+  display_name: Method Implementation Version
+  description: |
+    Identification for the software used, such as name and version (optional). Corresponds to DICOM Tag 0054,1103.
+  type: string
 MiscChannelCount:
   name: MiscChannelCount
   display_name: Misc Channel Count
@@ -2856,8 +2886,10 @@ ReconMatrixSize:
   name: ReconMatrixSize
   display_name: Recon Matrix Size
   description: |
-    An array of integers with a length of 3 denoting the matrix size of the acquisition slab. This should be specified as, for example, [32, 32, 1] for a 2D acquisition or [32, 1, 1] for a 1D acquisition.
+    Size of the reconstruction matrix 
   type: array
+  minItems: 2
+  maxItems: 2
   items:
     type: number
 ReconMethodParameterUnits:
