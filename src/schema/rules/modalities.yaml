@@ -34,3 +34,6 @@ nirs:
 mrs:
   datatypes:
     - mrs
+ct:
+  datatypes:
+    - ct

@@ -572,6 +572,11 @@ coordsystem:
   description: |
     A JSON document specifying the coordinate system(s) used for the MEG, EEG,
     head localization coils, and anatomical landmarks.
+ct:
+  value: ct
+  display_name: Computed Tomography
+  description: |
+    Computed Tomography imaging data.
 defacemask:
   value: defacemask
   display_name: Defacing Mask

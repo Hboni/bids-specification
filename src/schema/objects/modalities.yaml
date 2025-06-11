@@ -38,3 +38,6 @@ nirs:
 mrs:
   display_name: Magnetic Resonance Spectroscopy
   description: Data acquired with MRS.
+ct:
+  display_name: Computed Tomography
+  description: Data acquired with CT.
