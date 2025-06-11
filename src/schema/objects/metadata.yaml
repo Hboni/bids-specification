@@ -3785,6 +3785,25 @@ TracerSNOMED:
     ID of the tracer compound from the SNOMED Ontology
     (subclass of Radioactive isotope).
   type: string
+TubeCurrent:
+  name: TubeCurrent
+  display_name: Tube Current
+  description: |
+    X-Ray tube current in milliamperes.
+  anyOf:
+    - type: number
+      unit: mA
+    - type: array
+      items:
+        type: number
+        unit: mA
+TubeVoltage:
+  name: TubeVoltage
+  display_name: Tube Voltage
+  description: |
+    X-Ray tube peak kilo voltage (kVp) output.
+  type: number
+  unit: kVp
 TubingLength:
   name: TubingLength
   display_name: Tubing Length

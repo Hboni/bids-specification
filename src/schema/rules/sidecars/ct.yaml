@@ -28,8 +28,6 @@ CTAcquisition:
     - datatype == "ct"
     - suffix == "ct"
   fields:
-    ScanOptions:
-
     TubeVoltage:
       level: recommended
       description_addendum: |
