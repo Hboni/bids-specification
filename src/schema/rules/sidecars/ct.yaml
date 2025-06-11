@@ -36,3 +36,66 @@ CTAcquisition:
       level: recommended
       description_addendum: |
         X-Ray tube current in milliamperes. Corresponds to [DICOM Tag 0018,1151](https://dicomlookup.com/dicomtags/(0018,1151)) `X-Ray Tube Current`.
+
+CTReconstruction:
+  selectors:
+    - datatype == "ct"
+    - suffix == "ct"
+    ReconstructionDiameter:
+      level: 
+      description_addendum: |
+        Diameter in mm of the region from within which data were used in creating the reconstruction of the image. Data may exist outside this region and portions of the patient may exist outside this region. Corresponds to [DICOM Tag 0018,1100](https://dicomlookup.com/dicomtags/(0018,1100)) `Reconstruction Diameter`.
+
+    ConvolutionKernel:
+      level:
+      description_addendum: |
+        Convolution algorithm during image reconstruction. Corresponds to [DICOM Tag 0018,1210](https://dicomlookup.com/dicomtags/(0018,1210)) `Convolution Kernel`. Type: string. Permissible values: “standard”, “bone”, …
+
+    ReconMatrixSize:
+      level: 
+      description_addendum: |
+        Size of the reconstruction matrix. Corresponds to [DICOM Tag 0018,1101](https://dicomlookup.com/dicomtags/(0018,1101)) `Reconstruction Matrix Size`. Type: array of two numbers.
+
+    MatrixSize:
+      level:
+      description_addendum: |
+        An array of integers with a length of 3 denoting the matrix size of the acquisition slab. This should be specified as, for example, [32, 32, 1] for a 2D acquisition or [32, 1, 1] for a 1D acquisition.
+        array of three numbers
+
+    ReconMethodName:
+      level:
+      description_addendum: |
+        Reconstruction method or algorithm. Corresponds to DICOM Tag 0054,1103. 
+        string 
+
+    MethodParameterLabels:
+      level:
+      description_addendum: |
+        Names of filter parameters. Corresponds to DICOM Tag 0054,1103. 
+        array of strings 
+
+    MethodParameterUnits:
+      level:
+      description_addendum: |
+        Units of filter parameters. Corresponds to DICOM Tag 0054,1103. 
+        array of strings 
+
+    MethodParameterValues:
+      level:
+      description_addendum: |
+        Values of filter parameters. Corresponds to DICOM Tag 0054,1103. 
+        arrays of numbers 
+
+    MethodImplementationVersion:
+      level:
+      description_addendum: |
+        Identification for the software used, such as name and version (optional). Corresponds to DICOM Tag 0054,1103. 
+        string 
+
+    ReconFilterType:
+      level:
+      description_addendum: |
+        Type of post-recon smoothing. Corresponds to DICOM Tag 0054,1103. 
+        string 
+        "none", "gaussian", ...
+
