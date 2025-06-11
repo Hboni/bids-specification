@@ -20,6 +20,7 @@ nav:
           - Behavioral experiments (with no neural recordings): modality-specific-files/behavioral-experiments.md
           - Genetic Descriptor: modality-specific-files/genetic-descriptor.md
           - Positron Emission Tomography: modality-specific-files/positron-emission-tomography.md
+          - Computed Tomography: modality-specific-files/computed-tomography.md
           - Microscopy: modality-specific-files/microscopy.md
           - Near-Infrared Spectroscopy: modality-specific-files/near-infrared-spectroscopy.md
           - Motion: modality-specific-files/motion.md

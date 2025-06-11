@@ -11,6 +11,11 @@ beh:
   display_name: Behavioral Data
   description: |
     Behavioral data.
+ct:
+  value: ct
+  display_name: Computed Tomography
+  description : |
+    Computed tomography data
 dwi:
   value: dwi
   display_name: Diffusion-Weighted Imaging

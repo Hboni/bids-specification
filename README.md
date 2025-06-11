@@ -34,6 +34,7 @@ BIDS currently supports the following data modalities with
 - NIRS
 - motion
 - MRS
+- CT
 
 # Formatting your data with BIDS
 

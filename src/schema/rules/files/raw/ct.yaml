@@ -1,0 +1,16 @@
+---
+ct:
+  suffixes:
+    - ct
+  extensions:
+    - .nii.gz
+    - .nii
+    - .json
+  datatypes:
+    - ct
+  entities:
+    subject: required
+    session: optional
+    ceagent: optional
+    reconstruction: optional
+    run: optional

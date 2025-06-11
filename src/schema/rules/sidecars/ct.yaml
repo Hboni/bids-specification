@@ -1,0 +1,40 @@
+---
+# CT common metadata fields
+CTHardware:
+  selectors:
+    - datatype == "ct"
+    - suffix == "ct"
+  fields:
+    Manufacturer:
+      level: required
+      description_addendum: |
+        Corresponds to [DICOM Tag 0008, 0070](https://dicomlookup.com/dicomtags/(0008,0070)) `Manufacturer`.
+    ManufacturersModelName:
+      level: required
+      description_addendum: |
+        Corresponds to [DICOM Tag 0008, 1090](https://dicomlookup.com/dicomtags/(0008,1090)) `Manufacturers Model Name`.
+    Units:
+      level: required
+      description_addendum: |
+        SI unit for radioactivity (Becquerel) should be used (for example, "Bq/mL").
+        Corresponds to [DICOM Tag 0054, 1001](https://dicomlookup.com/dicomtags/(0054,1001)) `Units`.
+    BodyPart:
+      level: recommended
+      description_addendum: |
+        Corresponds to [DICOM Tag 0018, 0015](https://dicomlookup.com/dicomtags/(0018,0015)) `Body Part Examined`.
+
+CTAcquisition:
+  selectors:
+    - datatype == "ct"
+    - suffix == "ct"
+  fields:
+    ScanOptions:
+
+    TubeVoltage:
+      level: recommended
+      description_addendum: |
+        X-Ray tube peak kilo voltage (kVp) output. Corresponds to [DICOM Tag 0018,0060](https://dicomlookup.com/dicomtags/(0018,0060)) `KVP`.
+    TubeCurrent:
+      level: recommended
+      description_addendum: |
+        X-Ray tube current in milliamperes. Corresponds to [DICOM Tag 0018,1151](https://dicomlookup.com/dicomtags/(0018,1151)) `X-Ray Tube Current`.
