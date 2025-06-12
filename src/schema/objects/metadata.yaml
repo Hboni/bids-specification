@@ -415,7 +415,7 @@ CTDIPhantomDiameter:
     Diameter of the phantom in cm used for the CTDI calculation. Usually 16=head or 32=body.
     Corresponds to [DICOM tag 0018,9346]() ``.
   type: number
-  unit:
+  unit: mm
 CTDIvol:
   name: CTDIvol
   display_name: CTDI vol
@@ -1275,7 +1275,7 @@ FlipAngle:
 FocalSpots:
   name: FocalSpots
   display_name: Focal Spots
-  description : |
+  description: |
     Origin of x-rays in the X-ray tube used to produce an image (in mm).
     It is one of the geometric factors that defines spatial resolution of a CT system.
   type: number
@@ -2923,7 +2923,9 @@ ReconstructionDiameter:
   name: ReconstructionDiameter
   display_name: Reconstruction Diameter
   description: |
-    Diameter in mm of the region from within which data were used in creating the reconstruction of the image. Data may exist outside this region and portions of the patient may exist outside this region. Corresponds to [DICOM Tag 0018,1100](https://dicomlookup.com/dicomtags/(0018,1100)) `Reconstruction Diameter`.
+    Diameter in mm of the region from within which data were used in creating the reconstruction of the image.
+    Data may exist outside this region and portions of the patient may exist outside this region.
+    Corresponds to [DICOM Tag 0018,1100](https://dicomlookup.com/dicomtags/(0018,1100)) `Reconstruction Diameter`.
   type: number
   unit: mm
 
@@ -2973,7 +2975,7 @@ ReconMatrixSize:
   name: ReconMatrixSize
   display_name: Recon Matrix Size
   description: |
-    Size of the reconstruction matrix 
+    Size of the reconstruction matrix
   type: array
   minItems: 2
   maxItems: 2
@@ -3437,7 +3439,7 @@ SingleCollimationWidth:
   name: SingleCollimationWidth
   display_name: Single Collimation Width
   description: |
-    The width of a single row of acquired data in milimeters.
+    The width of a single row of acquired data in milllimeters.
   type: number
   unit: mm
 SinglesRate:
@@ -3834,7 +3836,7 @@ TableSpeed:
   name: TableSpeed
   display_name: Taple Speed
   description: |
-    The distance that the table moves in one second in milimeters.
+    The distance that the table moves in one second in milllimeters.
   type: number
   unit: mm
 TaskDescription:
@@ -3906,7 +3908,7 @@ TotalCollimationWidth:
   name: TotalCollimationWidth
   display_name: Total Collimation Width
   description: |
-    The width of the total collimation over the area of active X-Ray detection in milimeters.
+    The width of the total collimation over the area of active X-Ray detection in milllimeters.
   type: number
   unit: mm
 TotalReadoutTime:
