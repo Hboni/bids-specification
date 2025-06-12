@@ -43,7 +43,7 @@ The included metadata are divided into sections described below.
 
 ### CT metadata
 
-#### Acquisition informations
+#### Acquisition information
 
 {{ MACROS___make_sidecar_table("ct.CTAcquisition") }}
 
