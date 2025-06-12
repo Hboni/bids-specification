@@ -16,6 +16,18 @@ context of the academic literature.
 
 ## Terminology and conventions
 
+CT scans can be acquired with unequal between-slice spacing.
+However NIfTI assumes all 2D slices that form a 3D stack are equidistant.
+These acquisitions can be resliced during convertion to obtain the same slice thickness.
+The information of this reslising MUST be referenced in the `rec-` key (exemple: `rec-Resliced`).
+In case of unequal between-slice spacing, NIfTI can be as raw data.
+
+CT scans can also be acquired with gantry/detector tilt.
+Titled acquisitions helps to focus acquisition on localisation and reduce dose received.
+In order to fit the 3D grid of NIfTI files tilted acquisition need [resample during conversion from DICOM](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage#Computed_Tomography_.28CT.2C_CAT.29).
+In case of gantry tilt, metadata `GantryTilt` is MANDATORY.
+Information about resampled data can be stored in the `rec-` key as a free label (exemple : `rec-GTResampled`).
+
 ## CT recording data
 
 {{ MACROS___make_filename_template(
@@ -26,6 +38,8 @@ context of the academic literature.
 
 CT data MUST be stored in the `ct` directory.
 NIfTI files with the `_ct` suffix.
+In addition to the imaging data (*.nii) a _pet.json sidecar file MUST be provided.
+The included metadata are divided into sections described below.
 
 ### CT metadata
 
@@ -50,8 +64,6 @@ These indexes are used to control safety for patients and optimize scan paramete
 ### Hardware information
 
 ### Institution information
-
-### Tissue description
 
 ### Deidentification information
 
