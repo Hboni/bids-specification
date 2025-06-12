@@ -38,7 +38,8 @@ CTAcquisition:
     TubeVoltage:
       level: recommended
       description_addendum: |
-        X-Ray tube peak kilo voltage (kVp) output. Corresponds to DICOM Tag 0018,0060 `KVP`.
+        X-Ray tube peak kilo voltage (kVp) output.
+        Corresponds to DICOM Tag 0018,0060 `KVP`.
     TubeCurrent:
       level: recommended
       description_addendum: |
@@ -56,7 +57,8 @@ CTAcquisition:
     Exposure:
       level: optional
       description_addendum: |
-        X-Ray exposure of the patient in milliamperes seconds. Corresponds to DICOM Tag 0018,1152 `Exposure`.
+        X-Ray exposure of the patient in milliamperes seconds.
+        Corresponds to DICOM Tag 0018,1152 `Exposure`.
     ExposureTime:
       level: optional
       description_addendum: |
@@ -82,7 +84,8 @@ CTAcquisition:
     TotalCollimationWidth:
       level: optional
       description_addendum: |
-        The width of the total collimation (in mm) over the area of active X-Ray detection. Corresponds to DICOM Tag 0018,9307 `Total Collimation Width`.
+        The width of the total collimation (in mm) over the area of active X-Ray detection.
+        Corresponds to DICOM Tag 0018,9307 `Total Collimation Width`.
     FilterType:
       level: recommended
       description_addendum: |
@@ -128,7 +131,7 @@ CTReconstruction:
 
     ReconFilterType:
       level: optional
-      description_addendum: 
+      description_addendum:
         $ref: objects.metadata.ReconFilterType.description
 
 CTInstitutionInformation:
@@ -149,4 +152,3 @@ CTInstitutionInformation:
       description_addendum: |
         Corresponds to DICOM Tag 0008, 1040
         `Institutional Department Name`.
-

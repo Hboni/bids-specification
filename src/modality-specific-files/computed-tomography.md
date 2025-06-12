@@ -63,7 +63,6 @@ These indexes are used to control safety for patients and optimize scan paramete
 
 {{ MACROS___make_sidecar_table("ct.CTReconstruction") }}
 
-
 ### Institution information
 
 <!-- This block generates a metadata table.
