@@ -415,7 +415,7 @@ CTDIPhantomDiameter:
     Diameter of the phantom in cm used for the CTDI calculation. Usually 16=head or 32=body.
     Corresponds to [DICOM tag 0018,9346]() ``.
   type: number
-  unit:
+  unit: mm
 CTDIvol:
   name: CTDIvol
   display_name: CTDI vol

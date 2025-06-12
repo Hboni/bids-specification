@@ -23,19 +23,6 @@ CTHardware:
       description_addendum: |
         Corresponds to [DICOM Tag 0018, 0015](https://dicomlookup.com/dicomtags/(0018,0015)) `Body Part Examined`.
 
-CTIndexes:
-  selectors:
-    - datatype == "ct"
-    - suffix == "ct"
-  fields:
-    CTDIvol: optional
-    CTDIvolUnit: optional
-    CTDIPhantomDiameter: optional
-    DLP: optional
-    DLPUnit: optional
-    SSDE: optional
-    SSDEUnit: optional
-
 CTAcquisition:
   selectors:
     - datatype == "ct"
@@ -49,51 +36,6 @@ CTAcquisition:
       level: recommended
       description_addendum: |
         X-Ray tube current in milliamperes. Corresponds to [DICOM Tag 0018,1151](https://dicomlookup.com/dicomtags/(0018,1151)) `X-Ray Tube Current`.
-    AcquisitionVoxelSize: recommended
-    Pitch:
-      level: recommended
-      description_addendum: |
-        Acquisition pitch. Ratio of the Table Feed per Rotation to the Total Collimation Width.
-        Corresponds to [DICOM Tag 0018,9311](https://dicomlookup.com/dicomtags/(0018,9311)) `Spiral Pitch Factor`.
-    ContrastBolusIngredient: optional
-    ContrastBolusAgent: optional
-    ContrastBolusRoute: optional
-    Exposure:
-      level: optional
-      description_addendum: |
-        X-Ray exposure of the patient in milliamperes seconds. Corresponds to [DICOM Tag 0018,1152](https://dicomlookup.com/dicomtags/(0018,1152)) `Exposure`.
-    ExposureTime:
-      level: optional
-      description_addendum: |
-        Time of X-Ray exposure in msec. Corresponds to [DICOM Tag 0018,1150](https://dicomlookup.com/dicomtags/(0018,1150)) `Exposure Time`.
-    # TotalExposureTime
-    GantryTilt:
-      level: optional
-      description_addendum: |
-        Angle of the scanning gantry in degrees. MANDATORY if not zero.
-        Corresponds to [Dicom Tag 0018,1120](https://dicomlookup.com/dicomtags/(0018,1120)) `Gantry/Detector Tilt`.
-    FocalSpots:
-      level: optional
-      description_addendum: |
-        Origin of x-rays in the X-ray tube used to produce an image (in mm).
-        It is one of the geometric factors that defines spatial resolution of a CT system.
-        Corresponds to [DICOM Tag 0018,1190]().
-    SingleCollimationWidth:
-      level: optional
-      description_addendum: |
-        The width of a single row of acquired data (in mm) Corresponds to [DICOM Tag 0018,9306]() `Single Collimation Width`.
-    TotalCollimationWidth:
-      level: optional
-      description_addendum: |
-        The width of the total collimation (in mm) over the area of active X-Ray detection. Corresponds to [DICOM Tag 0018,9307]() `Total Collimation Width`.
-    FilterType:
-      level: recommended
-      description_addendum: |
-        Label for the type of filter inserted into the X-Ray beam. Corresponds to [DICOM Tag 0018,1160]() `Filter Type`.
-    TableSpeed:
-      level: optional
-      description_addendum: |
-        The distance in mm that the table moves in one second. Corresponds to [DICOM Tag 0018,9309]() `Table Speed`.
 
 CTReconstruction:
   selectors:
