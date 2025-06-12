@@ -31,11 +31,13 @@ CTAcquisition:
     TubeVoltage:
       level: recommended
       description_addendum: |
-        X-Ray tube peak kilo voltage (kVp) output. Corresponds to [DICOM Tag 0018,0060](https://dicomlookup.com/dicomtags/(0018,0060)) `KVP`.
+        X-Ray tube peak kilo voltage (kVp) output.
+        Corresponds to [DICOM Tag 0018,0060](https://dicomlookup.com/dicomtags/(0018,0060)) `KVP`.
     TubeCurrent:
       level: recommended
       description_addendum: |
-        X-Ray tube current in milliamperes. Corresponds to [DICOM Tag 0018,1151](https://dicomlookup.com/dicomtags/(0018,1151)) `X-Ray Tube Current`.
+        X-Ray tube current in milliamperes.
+        Corresponds to [DICOM Tag 0018,1151](https://dicomlookup.com/dicomtags/(0018,1151)) `X-Ray Tube Current`.
 
 CTReconstruction:
   selectors:

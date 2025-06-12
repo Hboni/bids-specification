@@ -14,7 +14,7 @@ beh:
 ct:
   value: ct
   display_name: Computed Tomography
-  description : |
+  description: |
     Computed tomography data
 dwi:
   value: dwi
