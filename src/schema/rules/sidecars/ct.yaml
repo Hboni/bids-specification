@@ -36,3 +36,59 @@ CTAcquisition:
       level: recommended
       description_addendum: |
         X-Ray tube current in milliamperes. Corresponds to [DICOM Tag 0018,1151](https://dicomlookup.com/dicomtags/(0018,1151)) `X-Ray Tube Current`.
+
+CTReconstruction:
+  selectors:
+    - datatype == "ct"
+    - suffix == "ct"
+  fields:
+    ReconstructionDiameter:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.ReconstructionDiameter.description
+
+    ConvolutionKernel:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.ConvolutionKernel.description
+
+    ReconMatrixSize:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.ReconMatrixSize.description
+
+    MatrixSize:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.MatrixSize.description
+
+    ReconMethodName:
+      level: optional
+      description_addendum:
+        $ref: objects.metadata.ReconMethodName.description
+
+    MethodParameterLabels:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.MethodParameterLabels.description
+
+    MethodParameterUnits:
+      level: optional
+      description_addendum:
+        $ref: objects.metadata.MethodParameterUnits.description
+
+    MethodParameterValues:
+      level: optional
+      description_addendum:
+        $ref: objects.metadata.MethodParameterValues.description
+
+    MethodImplementationVersion:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.MethodImplementationVersion.description
+
+    ReconFilterType:
+      level: optional
+      description_addendum: 
+        $ref: objects.metadata.ReconFilterType.description
+

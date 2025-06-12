@@ -542,6 +542,12 @@ ContrastBolusIngredient:
     # TODO: Add definitions for these values. (perhaps don't specify)
     - UNKNOWN
     - NONE
+ConvolutionKernel:
+  name: ConvolutionKernel
+  display_name: Convolution Kernel
+  description: |
+    Convolution algorithm during image reconstruction. Corresponds to DICOM Tag 0018,1210.
+  type: string
 DCOffsetCorrection:
   name: DCOffsetCorrection
   display_name: DC Offset Correction
@@ -2174,6 +2180,36 @@ MetaboliteRecoveryCorrectionApplied:
     If `true`, the `hplc_recovery_fractions` column MUST be present in the
     corresponding `*_blood.tsv` file.
   type: boolean
+MethodParameterLabels:
+  name: MethodParameterLabels
+  display_name: Method Parameter Labels
+  description: |
+    Names of filter parameters. Corresponds to DICOM Tag 0054,1103.
+  type: array
+  items:
+    type: string
+MethodParameterUnits:
+  name: MethodParameterUnits
+  display_name: Method Parameter Units
+  description: |
+    Units of filter parameters. Corresponds to DICOM Tag 0054,1103.
+  type: array
+  items:
+    type: string
+MethodParameterValues:
+  name: MethodParameterValues
+  display_name: Method Parameter Values
+  description: |
+    Values of filter parameters. Corresponds to DICOM Tag 0054,1103.
+  type: array
+  items:
+    type: number
+MethodImplementationVersion:
+  name: MethodImplementationVersion
+  display_name: Method Implementation Version
+  description: |
+    Identification for the software used, such as name and version (optional). Corresponds to DICOM Tag 0054,1103.
+  type: string
 MiscChannelCount:
   name: MiscChannelCount
   display_name: Misc Channel Count
@@ -2796,6 +2832,14 @@ ReceiveGain:
       items:
         type: number
         unit: dB
+ReconstructionDiameter:
+  name: ReconstructionDiameter
+  display_name: Reconstruction Diameter
+  description: |
+    Diameter in mm of the region from within which data were used in creating the reconstruction of the image. Data may exist outside this region and portions of the patient may exist outside this region. Corresponds to [DICOM Tag 0018,1100](https://dicomlookup.com/dicomtags/(0018,1100)) `Reconstruction Diameter`.
+  type: number
+  unit: mm
+
 ReconFilterSize:
   name: ReconFilterSize
   display_name: Recon Filter Size
@@ -2838,6 +2882,16 @@ ReconMethodParameterLabels:
   type: array
   items:
     type: string
+ReconMatrixSize:
+  name: ReconMatrixSize
+  display_name: Recon Matrix Size
+  description: |
+    Size of the reconstruction matrix 
+  type: array
+  minItems: 2
+  maxItems: 2
+  items:
+    type: number
 ReconMethodParameterUnits:
   name: ReconMethodParameterUnits
   display_name: Recon Method Parameter Units

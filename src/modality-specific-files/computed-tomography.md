@@ -37,6 +37,8 @@ NIfTI files with the `_ct` suffix.
 
 ### Reconstruction
 
+{{ MACROS___make_sidecar_table("ct.CTReconstruction") }}
+
 ### Hardware information
 
 ### Institution information
