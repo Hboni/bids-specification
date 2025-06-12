@@ -41,13 +41,17 @@ NIfTI files with the `_ct` suffix.
 In addition to the imaging data (*.nii) a _pet.json sidecar file MUST be provided.
 The included metadata are divided into sections described below.
 
-### CT metadata
+## CT metadata
 
-#### Acquisition information
+### Hardware information
+
+{{ MACROS___make_sidecar_table("ct.CTHardware") }}
+
+### Acquisition information
 
 {{ MACROS___make_sidecar_table("ct.CTAcquisition") }}
 
-#### Indexes
+### Indexes
 
 CT scan is an important source of dose experienced by patients.
 To quantify radiation dose, multiple indexes are used to estimate dose from scanner perspective (CTDIvol) or from patient perspective (SSDE).
@@ -55,15 +59,23 @@ These indexes are used to control safety for patients and optimize scan paramete
 
 {{ MACROS___make_sidecar_table("ct.CTIndexes") }}
 
-### Time
-
 ### Reconstruction
 
 {{ MACROS___make_sidecar_table("ct.CTReconstruction") }}
 
-### Hardware information
 
 ### Institution information
+
+<!-- This block generates a metadata table.
+These tables are defined in
+  src/schema/rules/sidecars
+The definitions of the fields specified in these tables may be found in
+  src/schema/objects/metadata.yaml
+A guide for using macros can be found at
+ https://github.com/bids-standard/bids-specification/blob/master/macros_doc.md
+-->
+
+{{ MACROS___make_sidecar_table("ct.CTInstitutionInformation") }}
 
 ### Deidentification information
 
@@ -90,6 +102,10 @@ and a guide for using macros can be found at
 -->
 {{ MACROS___make_subobject_table("metadata.DeidentificationMethodCodeSequence.items") }}
 
-#### Example (`*_ct.json`)
+### Example (`*_ct.json`)
 
-### Recommended patient data
+```JSON
+{
+    "Manufacturer": "Siemens",
+}
+```
