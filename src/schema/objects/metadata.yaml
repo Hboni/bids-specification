@@ -1167,20 +1167,6 @@ EthicsApprovals:
   type: array
   items:
     type: string
-Exposure:
-  name: Exposure
-  display_name: Exposure
-  description: |
-    X-Ray exposure of the patient in milliamperes seconds.
-  type: number
-  unit: mAs
-ExposureTime:
-  name: ExposureTime
-  display_name: Exposure Time
-  description: |
-    Time of X-Ray exposure in milliseconds.
-  type: number
-  unit: ms
 FiducialsCoordinateSystem:
   name: FiducialsCoordinateSystem
   display_name: Fiducials Coordinate System
@@ -3961,9 +3947,9 @@ TracerSNOMED:
     ID of the tracer compound from the SNOMED Ontology
     (subclass of Radioactive isotope).
   type: string
-TubeCurrent:
-  name: TubeCurrent
-  display_name: Tube Current
+XRayTubeCurrent:
+  name: XRayTubeCurrent
+  display_name: X-Ray Tube Current
   description: |
     X-Ray tube current in milliamperes.
   anyOf:
@@ -3973,9 +3959,9 @@ TubeCurrent:
       items:
         type: number
         unit: mA
-TubeVoltage:
-  name: TubeVoltage
-  display_name: Tube Voltage
+XRayTubeVoltage:
+  name: XRayTubeVoltage
+  display_name: X-Ray Tube Voltage
   description: |
     X-Ray tube peak kilo voltage (kVp) output.
   type: number
@@ -4237,3 +4223,17 @@ iEEGReference:
     this field should have a general description and the channel specific
     reference should be defined in the `channels.tsv` file.
   type: string
+XRayExposure:
+  name: XRayExposure
+  display_name: X-Ray Exposure
+  description: |
+    X-Ray exposure of the patient in milliamperes seconds.
+  type: number
+  unit: mAs
+XRayExposureTime:
+  name: XRayExposureTime
+  display_name: X-Ray Exposure Time
+  description: |
+    Time of X-Ray exposure in milliseconds.
+  type: number
+  unit: ms

@@ -11,6 +11,8 @@ ct:
   entities:
     subject: required
     session: optional
+    acquisition: optional
     ceagent: optional
     reconstruction: optional
     run: optional
+    processing: optional
