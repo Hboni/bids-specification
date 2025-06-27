@@ -29,9 +29,9 @@ all:
 
 fullvalidateschema:
 	uv run bst export > src/schema.json
-dd	bids-validator-deno --schema file://${PWD}/src/schema.json ../bids-examples/ct001/ --verbose --ignoreWarnings --ignoreNiftiHeaders; \
+	bids-validator-deno --schema file://${PWD}/src/schema.json ../bids-examples/ct001/ --verbose --ignoreWarnings --ignoreNiftiHeaders; \
 	example_status=$$?; \
-	mkdocs build; \
+	uv run mkdocs build; \
 	build_status=$$?; \
 	echo "example_status: $$example_status"; \
 	echo "build_status: $$build_status"; \
@@ -45,5 +45,4 @@ dd	bids-validator-deno --schema file://${PWD}/src/schema.json ../bids-examples/c
 
 quickvalidateschema:
 	uv run bst export > src/schema.json
-	cat src/schema.json | jq '.rules.files.raw.ct.ct.entities.acquisition = "optional"' > src/schema.json.tmp && mv src/schema.json.tmp src/schema.json
 	bids-validator-deno --schema file://${PWD}/src/schema.json ../bids-examples/ct001/ --verbose --ignoreWarnings --ignoreNiftiHeaders; \

@@ -30,7 +30,6 @@ CTIndexes:
     DLPUnit: optional
     SSDE: optional
     SSDEUnit: optional
-
 CTAcquisition:
   selectors:
     - datatype == "ct"
