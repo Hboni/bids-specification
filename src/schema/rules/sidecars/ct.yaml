@@ -131,8 +131,6 @@ CTReconstruction:
 
     ReconFilterType:
       level: optional
-      description_addendum:
-        $ref: objects.metadata.ReconFilterType.description
 
 CTInstitutionInformation:
   selectors:
