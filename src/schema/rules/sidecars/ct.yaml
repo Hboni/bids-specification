@@ -35,12 +35,12 @@ CTAcquisition:
     - datatype == "ct"
     - suffix == "ct"
   fields:
-    TubeVoltage:
+    XRayTubeVoltage:
       level: recommended
       description_addendum: |
         X-Ray tube peak kilo voltage (kVp) output.
         Corresponds to DICOM Tag 0018,0060 `KVP`.
-    TubeCurrent:
+    XRayTubeCurrent:
       level: recommended
       description_addendum: |
         X-Ray tube current in milliamperes.
@@ -54,12 +54,12 @@ CTAcquisition:
     ContrastBolusIngredient: optional
     ContrastBolusAgent: optional
     ContrastBolusRoute: optional
-    Exposure:
+    XRayExposure:
       level: optional
       description_addendum: |
         X-Ray exposure of the patient in milliamperes seconds.
         Corresponds to DICOM Tag 0018,1152 `Exposure`.
-    ExposureTime:
+    XRayExposureTime:
       level: optional
       description_addendum: |
         Time of X-Ray exposure in msec.
@@ -131,8 +131,6 @@ CTReconstruction:
 
     ReconFilterType:
       level: optional
-      description_addendum:
-        $ref: objects.metadata.ReconFilterType.description
 
 CTInstitutionInformation:
   selectors:
