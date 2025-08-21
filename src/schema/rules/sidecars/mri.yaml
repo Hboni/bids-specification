@@ -392,7 +392,7 @@ MRIInstitutionInformation:
 
 DeidentificationMethod:
   selectors:
-    - intersects([modality], ["mri", "pet"])
+    - intersects([modality], ["mri", "pet", "ct"])
     - match(extension, "^\.nii(\.gz)?$")
   fields:
     DeidentificationMethod:

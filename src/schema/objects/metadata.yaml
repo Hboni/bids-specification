@@ -413,7 +413,7 @@ CTDIPhantomDiameter:
   display_name: CDTI Phantom Diameter
   description: |
     Diameter of the phantom in cm used for the CTDI calculation. Usually 16=head or 32=body.
-    Corresponds to [DICOM tag 0018,9346]() ``.
+    Corresponds to DICOM Tag 0018, 9346 `CTDI Phantom Type Code Sequence`.
   type: number
   unit: mm
 CTDIvol:
@@ -421,12 +421,13 @@ CTDIvol:
   display_name: CTDI vol
   description: |
     Computed Tomography Dose Index.
+    Corresponds to DICOM tag 0018, 9345 `CTDIvol`.
   type: number
 CTDIvolUnit:
   name: CTDIvolUnit
   display_name: CTDI vol Unit
   description: |
-    Unit of the CDTI vol
+    Unit of the `"CDTIvol"`.
   type: string
 CellType:
   name: CellType
@@ -551,7 +552,7 @@ ContrastBolusAgent:
   display_name: Contrast Bolus Agent
   description: |
     Contrast or Bolus Agent.
-    Corresponds to [DICOM Tag 0018,1040]()
+    Corresponds to DICOM Tag 0018, 0010 `Contrast/Bolus Agent`.
   type: string
 ContrastBolusIngredient:
   name: ContrastBolusIngredient
@@ -574,13 +575,14 @@ ContrastBolusRoute:
   display_name: Contrast Bolus Route
   description: |
     Administration route of the contrast or bolus agent.
-    Corresponds to [DICOM Tag 0018,1040]() ``.
+    Corresponds to [DICOM Tag 0018,1040]() `Contrast/Bolus Route`.
   type: string
 ConvolutionKernel:
   name: ConvolutionKernel
   display_name: Convolution Kernel
   description: |
-    Convolution algorithm during image reconstruction. Corresponds to DICOM Tag 0018,1210.
+    Convolution algorithm during image reconstruction.
+    Corresponds to DICOM Tag 0018, 1210 `Convolution Kernel`.
   type: string
 DCOffsetCorrection:
   name: DCOffsetCorrection
@@ -2251,7 +2253,7 @@ MethodParameterLabels:
   name: MethodParameterLabels
   display_name: Method Parameter Labels
   description: |
-    Names of filter parameters. Corresponds to DICOM Tag 0054,1103.
+    Names of filter parameters.
   type: array
   items:
     type: string
@@ -2259,7 +2261,7 @@ MethodParameterUnits:
   name: MethodParameterUnits
   display_name: Method Parameter Units
   description: |
-    Units of filter parameters. Corresponds to DICOM Tag 0054,1103.
+    Units of filter parameters.
   type: array
   items:
     type: string
@@ -2267,7 +2269,7 @@ MethodParameterValues:
   name: MethodParameterValues
   display_name: Method Parameter Values
   description: |
-    Values of filter parameters. Corresponds to DICOM Tag 0054,1103.
+    Values of filter parameters.
   type: array
   items:
     type: number
@@ -2275,7 +2277,7 @@ MethodImplementationVersion:
   name: MethodImplementationVersion
   display_name: Method Implementation Version
   description: |
-    Identification for the software used, such as name and version (optional). Corresponds to DICOM Tag 0054,1103.
+    Identification for the software used, such as name and version (optional).
   type: string
 MiscChannelCount:
   name: MiscChannelCount
@@ -3737,7 +3739,7 @@ SSDEUnit:
   name: SSDEUnit
   display_name: SSDE Unit
   description: |
-    Unit of SSDE value.
+    Unit of `"SSDE"` value.
   type: string
 StartTime:
   name: StartTime
@@ -4228,8 +4230,13 @@ XRayExposure:
   display_name: X-Ray Exposure
   description: |
     X-Ray exposure of the patient in milliamperes seconds.
-  type: number
-  unit: mAs
+  anyOf:
+    - type: number
+      unit: mAs
+    - type: array
+      items:
+        unit: mAs
+        type: number
 XRayExposureTime:
   name: XRayExposureTime
   display_name: X-Ray Exposure Time
